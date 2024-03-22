@@ -25,6 +25,10 @@ public class VisualCalculator {
 	
 	public VisualCalculator() {
 		
+		// Set the default font size for JTextFields
+		UIManager.put("TextField.font", new Font("Latin Modern", Font.PLAIN, 16)); 
+
+		
 		//Create Frame
 		frame = new JFrame("Calculator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,9 +37,10 @@ public class VisualCalculator {
 		
 	    operationInput = new JTextField();
 		
-		
 		//Creating Buttons for all numbers
-		JButton zeroButton = new JButton("0");
+		RoundedButton zeroButton = new RoundedButton("0");
+		zeroButton.setBackground(Color.BLACK);
+		zeroButton.setForeground(Color.WHITE);
 		zeroButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -44,6 +49,8 @@ public class VisualCalculator {
 		});
 		
 		JButton oneButton = new JButton("1");
+		oneButton.setBackground(Color.BLACK);
+		oneButton.setForeground(Color.WHITE);
 		oneButton.addActionListener(new ActionListener () {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -52,6 +59,8 @@ public class VisualCalculator {
 		});
 		
 		JButton twoButton = new JButton("2");
+		twoButton.setBackground(Color.BLACK);
+		twoButton.setForeground(Color.WHITE);
 		twoButton.addActionListener(new ActionListener () {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -60,6 +69,8 @@ public class VisualCalculator {
 		});
 		
 		JButton threeButton = new JButton("3");
+		threeButton.setBackground(Color.BLACK);
+		threeButton.setForeground(Color.WHITE);
 		threeButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -68,6 +79,8 @@ public class VisualCalculator {
 		});
 		
 		JButton fourButton = new JButton("4");
+		fourButton.setBackground(Color.BLACK);
+		fourButton.setForeground(Color.WHITE);
 		fourButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -76,6 +89,8 @@ public class VisualCalculator {
 		});
 		
 		JButton fiveButton = new JButton("5");
+		fiveButton.setBackground(Color.BLACK);
+		fiveButton.setForeground(Color.WHITE);
 		fiveButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -84,6 +99,8 @@ public class VisualCalculator {
 		});
 		
 		JButton sixButton = new JButton("6");
+		sixButton.setBackground(Color.BLACK);
+		sixButton.setForeground(Color.WHITE);
 		sixButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -92,6 +109,8 @@ public class VisualCalculator {
 		});
 		
 		JButton sevenButton = new JButton("7");
+		sevenButton.setBackground(Color.BLACK);
+		sevenButton.setForeground(Color.WHITE);
 		sevenButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -100,6 +119,8 @@ public class VisualCalculator {
 		});
 		
 		JButton eightButton = new JButton("8");
+		eightButton.setBackground(Color.BLACK);
+		eightButton.setForeground(Color.WHITE);
 		eightButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -108,6 +129,8 @@ public class VisualCalculator {
 		});
 		
 		JButton nineButton = new JButton("9");
+		nineButton.setBackground(Color.BLACK);
+		nineButton.setForeground(Color.WHITE);
 		nineButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -116,6 +139,8 @@ public class VisualCalculator {
 		});
 		
 		JButton dotButton = new JButton(".");
+		dotButton.setBackground(Color.BLACK);
+		dotButton.setForeground(Color.WHITE);
 		dotButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -124,6 +149,8 @@ public class VisualCalculator {
 		});
 		
 		JButton equalsButton = new JButton("=");
+		equalsButton.setBackground(Color.ORANGE);
+		equalsButton.setForeground(Color.BLACK);
 		equalsButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -132,6 +159,8 @@ public class VisualCalculator {
 			});
 		
 		JButton additionButton = new JButton("+");
+		additionButton.setBackground(Color.ORANGE);
+		additionButton.setForeground(Color.BLACK);
 		additionButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -140,6 +169,8 @@ public class VisualCalculator {
 		});
 		
 		JButton subtractionButton = new JButton("-");
+		subtractionButton.setBackground(Color.ORANGE);
+		subtractionButton.setForeground(Color.BLACK);
 		subtractionButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -148,6 +179,8 @@ public class VisualCalculator {
 		});
 		
 		JButton multiplicationButton = new JButton("*");
+		multiplicationButton.setBackground(Color.ORANGE);
+		multiplicationButton.setForeground(Color.BLACK);
 		multiplicationButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -156,14 +189,18 @@ public class VisualCalculator {
 		});
 		
 		JButton divisionButton = new JButton("/");
+		divisionButton.setBackground(Color.ORANGE);
+		divisionButton.setForeground(Color.BLACK);
 		divisionButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				division();
+				division();	
 			}
 		});
 		
 		JButton clearButton = new JButton("C");
+		clearButton.setBackground(Color.GRAY);
+		clearButton.setForeground(Color.BLACK);
 		clearButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -172,6 +209,8 @@ public class VisualCalculator {
 		});
 		
 		JButton backSpaceButton = new JButton ("<--");
+		backSpaceButton.setBackground(Color.GRAY);
+		backSpaceButton.setForeground(Color.BLACK);
 		backSpaceButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
