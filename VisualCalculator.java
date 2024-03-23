@@ -1,3 +1,5 @@
+//Program by Leonardo Giorgioni
+
 package visualCalculator;
 
 //Appropriate Imports for Java Swing
@@ -26,8 +28,7 @@ public class VisualCalculator {
 	public VisualCalculator() {
 		
 		// Set the default font size for JTextFields
-		UIManager.put("TextField.font", new Font("Latin Modern", Font.PLAIN, 16)); 
-
+		UIManager.put("TextField.font", new Font("Latin Modern", Font.PLAIN, 15)); 
 		
 		//Create Frame
 		frame = new JFrame("Calculator");
@@ -35,20 +36,21 @@ public class VisualCalculator {
 		frame.setSize(400,500);
 		frame.setLocationRelativeTo(null);
 		
+		//Creates Text field
 	    operationInput = new JTextField();
 		
 		//Creating Buttons for all numbers
 		RoundedButton zeroButton = new RoundedButton("0");
-		zeroButton.setBackground(Color.BLACK);
-		zeroButton.setForeground(Color.WHITE);
+		zeroButton.setBackground(Color.BLACK);//This sets the color for background
+		zeroButton.setForeground(Color.WHITE);//This sets the color for the numbers
 		zeroButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				operationInput.setText(operationInput.getText() + "0");
+				operationInput.setText(operationInput.getText() + "0");//When button is clicked, will display this number on text field
 			}
 		});
 		
-		JButton oneButton = new JButton("1");
+		RoundedButton oneButton = new RoundedButton("1");
 		oneButton.setBackground(Color.BLACK);
 		oneButton.setForeground(Color.WHITE);
 		oneButton.addActionListener(new ActionListener () {
@@ -58,7 +60,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton twoButton = new JButton("2");
+		RoundedButton twoButton = new RoundedButton("2");
 		twoButton.setBackground(Color.BLACK);
 		twoButton.setForeground(Color.WHITE);
 		twoButton.addActionListener(new ActionListener () {
@@ -68,7 +70,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton threeButton = new JButton("3");
+		RoundedButton threeButton = new RoundedButton("3");
 		threeButton.setBackground(Color.BLACK);
 		threeButton.setForeground(Color.WHITE);
 		threeButton.addActionListener(new ActionListener() {
@@ -78,7 +80,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton fourButton = new JButton("4");
+		RoundedButton fourButton = new RoundedButton("4");
 		fourButton.setBackground(Color.BLACK);
 		fourButton.setForeground(Color.WHITE);
 		fourButton.addActionListener(new ActionListener() {
@@ -88,7 +90,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton fiveButton = new JButton("5");
+		RoundedButton fiveButton = new RoundedButton("5");
 		fiveButton.setBackground(Color.BLACK);
 		fiveButton.setForeground(Color.WHITE);
 		fiveButton.addActionListener(new ActionListener() {
@@ -98,7 +100,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton sixButton = new JButton("6");
+		RoundedButton sixButton = new RoundedButton("6");
 		sixButton.setBackground(Color.BLACK);
 		sixButton.setForeground(Color.WHITE);
 		sixButton.addActionListener(new ActionListener() {
@@ -108,7 +110,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton sevenButton = new JButton("7");
+		RoundedButton sevenButton = new RoundedButton("7");
 		sevenButton.setBackground(Color.BLACK);
 		sevenButton.setForeground(Color.WHITE);
 		sevenButton.addActionListener(new ActionListener() {
@@ -118,7 +120,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton eightButton = new JButton("8");
+		RoundedButton eightButton = new RoundedButton("8");
 		eightButton.setBackground(Color.BLACK);
 		eightButton.setForeground(Color.WHITE);
 		eightButton.addActionListener(new ActionListener() {
@@ -128,7 +130,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton nineButton = new JButton("9");
+		RoundedButton nineButton = new RoundedButton("9");
 		nineButton.setBackground(Color.BLACK);
 		nineButton.setForeground(Color.WHITE);
 		nineButton.addActionListener(new ActionListener() {
@@ -138,7 +140,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton dotButton = new JButton(".");
+		RoundedButton dotButton = new RoundedButton(".");
 		dotButton.setBackground(Color.BLACK);
 		dotButton.setForeground(Color.WHITE);
 		dotButton.addActionListener(new ActionListener() {
@@ -148,7 +150,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton equalsButton = new JButton("=");
+		RoundedButton equalsButton = new RoundedButton("=");
 		equalsButton.setBackground(Color.ORANGE);
 		equalsButton.setForeground(Color.BLACK);
 		equalsButton.addActionListener(new ActionListener() {
@@ -158,7 +160,7 @@ public class VisualCalculator {
 			}
 			});
 		
-		JButton additionButton = new JButton("+");
+		RoundedButton additionButton = new RoundedButton("+");
 		additionButton.setBackground(Color.ORANGE);
 		additionButton.setForeground(Color.BLACK);
 		additionButton.addActionListener(new ActionListener() {
@@ -168,7 +170,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton subtractionButton = new JButton("-");
+		RoundedButton subtractionButton = new RoundedButton("-");
 		subtractionButton.setBackground(Color.ORANGE);
 		subtractionButton.setForeground(Color.BLACK);
 		subtractionButton.addActionListener(new ActionListener() {
@@ -178,7 +180,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton multiplicationButton = new JButton("*");
+		RoundedButton multiplicationButton = new RoundedButton("*");
 		multiplicationButton.setBackground(Color.ORANGE);
 		multiplicationButton.setForeground(Color.BLACK);
 		multiplicationButton.addActionListener(new ActionListener() {
@@ -188,7 +190,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton divisionButton = new JButton("/");
+		RoundedButton divisionButton = new RoundedButton("/");
 		divisionButton.setBackground(Color.ORANGE);
 		divisionButton.setForeground(Color.BLACK);
 		divisionButton.addActionListener(new ActionListener() {
@@ -198,7 +200,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton clearButton = new JButton("C");
+		RoundedButton clearButton = new RoundedButton("C");
 		clearButton.setBackground(Color.GRAY);
 		clearButton.setForeground(Color.BLACK);
 		clearButton.addActionListener(new ActionListener() {
@@ -208,7 +210,7 @@ public class VisualCalculator {
 			}
 		});
 		
-		JButton backSpaceButton = new JButton ("<--");
+		RoundedButton backSpaceButton = new RoundedButton("<--");
 		backSpaceButton.setBackground(Color.GRAY);
 		backSpaceButton.setForeground(Color.BLACK);
 		backSpaceButton.addActionListener(new ActionListener() {
@@ -223,12 +225,12 @@ public class VisualCalculator {
 		GridBagConstraints gbc = new GridBagConstraints();
 		
 		//Task Input
-		gbc.gridx = 0;
-		gbc.gridy = 0;
-		gbc.gridwidth = 4;
-		gbc.gridheight = 1;
+		gbc.gridx = 0;//set column placement
+		gbc.gridy = 0;//Set row placement
+		gbc.gridwidth = 4;//Set column spanning
+		gbc.gridheight = 1;//Set row spanning
 		gbc.fill = GridBagConstraints.HORIZONTAL;
-		gbc.ipady = 30;
+		gbc.ipady = 30;//Increases the thickness of the height of the button
 		frame.add(operationInput,gbc);
 		
 		//Clear Button
@@ -237,7 +239,7 @@ public class VisualCalculator {
 		gbc.gridwidth = 1;
 		gbc.gridheight = 1;
 		gbc.fill = GridBagConstraints.BOTH;
-		gbc.weightx = 0.3;
+		gbc.weightx = 0.3;//
 		gbc.weighty = 0.3;
 		frame.add(clearButton, gbc);
 		
@@ -379,10 +381,12 @@ public class VisualCalculator {
 		gbc.fill = GridBagConstraints.BOTH;
 		frame.add(equalsButton, gbc);
 		
+		//Displaying all buttons
 		frame.setVisible(true);
 		
 }
 	
+	//Sets of methods for each operation
 	private void addition() {
 		firstNumber = Float.parseFloat(operationInput.getText()); //turns string into a float
 		currentOperation = "+";
@@ -426,7 +430,7 @@ public class VisualCalculator {
 	    }
 	}
 
-	
+	//Method for displaying your result
 	private void result() {
 		secondNumber = Float.parseFloat(operationInput.getText());
 		float result = 0;
@@ -446,7 +450,8 @@ public class VisualCalculator {
 		}else if (currentOperation.equals(div)) {
 			
 			if(secondNumber == 0) {
-				
+			
+			//Displays a second small window with an error message if division by 0
 			JOptionPane.showMessageDialog(frame, "Error: Division by zero", "Error", JOptionPane.ERROR_MESSAGE);
 			operationInput.setText("");
 			return;
